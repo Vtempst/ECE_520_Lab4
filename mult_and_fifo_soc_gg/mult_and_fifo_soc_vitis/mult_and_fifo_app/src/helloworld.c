@@ -98,7 +98,7 @@ int fifo_push(uint32_t data)
         return -1;
     }
 
-    Xil_Out32(WR_DATA_REG_ADDR, data & 0xFFFF);
+    Xil_Out32(WR_DATA_REG_ADDR, data);
     return 0;
 }
 
@@ -144,6 +144,10 @@ int main(void)
     uint32_t fifo_val;
     uint32_t expected;
 
+    uint32_t rev_val = Xil_In32(FPGA_REV_REG_ADDR);
+    uint32_t config_val = Xil_In32(CONFIG_REG_ADDR);
+    uint32_t threshold_val = Xil_In32(THRESHOLD_REG_ADDR);
+
     int errors = 0;
     int write_index = 0;
     int read_index = 0;
@@ -151,7 +155,12 @@ int main(void)
     init_platform();
 
     xil_printf("ECE 520/L - Custom AXI IP Lab - Gil Gandionco \n");
-    xil_printf("Multiplier + FIFO Test (1 to 100)\n");
+    xil_printf("\nFPGA Revision: 0x%08x\n", rev_val);
+    xil_printf("FIFO Parameters: WIDTH = %d, DEPTH = %d, READ_LATENCY = %d\n",
+    			(config_val & 0xFF), ((config_val >> 8) & 0xFFFF), ((config_val >>24) & 0xF));
+    xil_printf("FIFO Thresholds: ALMOST_EMPTY = %d, ALMOST_FULL = %d\n",
+    			(threshold_val & 0xFFFF), ((threshold_val >> 16) & 0xFFFF));
+    xil_printf("\nMultiplier + FIFO Test (1 to 100)\n");
 
     // TEST 1: Reset FIFO
     xil_printf("\nTest 1: FIFO Reset\n");
@@ -218,7 +227,7 @@ int main(void)
                 }
                 else
                 {
-                    xil_printf(" [FAIL]\n");
+                    xil_printf(" [Wrong]\n");
                     errors++;
                 }
 

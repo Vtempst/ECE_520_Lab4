@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="C:\Users\gilst\Documents\ECE520\mult_and_fifo_soc\mult_and_fifo_soc_vitis\mult_and_fifo_plat\export\mult_and_fifo_plat"/>
-	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="C:\Users\gilst\Documents\ECE520\mult_and_fifo_soc\mult_and_fifo_soc_vitis\mult_and_fifo_plat\export\mult_and_fifo_plat"/>
+	<item key="sdx.custom.platform.repository.locations" value="C:\Users\gilst\Documents\ECE520\mult_and_fifo_soc\mult_and_fifo_soc_vitis\mult_and_fifo_plat\export\mult_and_fifo_plat;C:\Users\gilst\Documents\ECE520\ECE_520_Lab4\mult_and_fifo_soc_gg\mult_and_fifo_soc_vitis\mult_and_fifo_plat"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="C:\Users\gilst\Documents\ECE520\ECE_520_Lab4\mult_and_fifo_soc_gg\mult_and_fifo_soc_vitis\mult_and_fifo_plat"/>
 </section>
