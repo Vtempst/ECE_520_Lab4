@@ -23,28 +23,28 @@ After each batch was read, the FIFO data count was zero and the empty and almost
 The results was that 100 values were written, 100 values read, and zero errors which demonstrated a successful communication between the multiplier, FIFO, and Zynq PS through AXI4-lite. The results also verified that the FIFO maintained the correct oder of data during write and read operations.
 
 Reset:<br>
-<img src="images/ResetFIFO.png" width="200">
+<img src="Images/ResetFIFO.png" width="200">
 
 Write 1-32:<br>
-<img src="images/Write1.png" width="200">
+<img src="Images/Write1.png" width="200">
 
 Read 1-32:<br>
-<img src="images/Read1.png" width="200">
+<img src="Images/Read1.png" width="200">
 
 Write 33-64:<br>
-<img src="images/Write2.png" width="200">
+<img src="Images/Write2.png" width="200">
 
 Read 33-64:<br>
-<img src="images/Read2.png" width="200">
+<img src="Images/Read2.png" width="200">
 
 Write 65-96:<br>
-<img src="images/Write3.png" width="200">
+<img src="Images/Write3.png" width="200">
 
 Read 65-96:<br>
-<img src="images/Read3.png" width="200">
+<img src="Images/Read3.png" width="200">
 
 Final Write/Read 97-100 and Results:<br>
-<img src="images/FinalWriteReadandResults.png" width="200">
+<img src="Images/FinalWriteReadandResults.png" width="200">
 
 ## Known Issues or Limitations
 
